@@ -41,6 +41,10 @@ export default class Alert extends Element {
     }
 
     if (!Component) {
+      if (children) {
+        return children;
+      }
+
       return (
         <div role="alert">
           {errors.map(error => error.message)}
