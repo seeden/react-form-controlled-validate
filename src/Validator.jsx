@@ -42,13 +42,9 @@ export default class Validator extends Component {
     if (!currentValidator || currentValidator.schema !== schema) {
       const ajv = this.ajv = this.ajv || Ajv({
         allErrors: true,
-        async: true,
       });
 
-      const validator = ajv.compile({
-        $async: true,
-        ...schema,
-      });
+      const validator = ajv.compile(schema);
 
       validator.schema = schema;
 
@@ -67,26 +63,26 @@ export default class Validator extends Component {
       return [];
     }
 
-    try {
-      await validator(value);
+    const valid = validator(value);
+    if (valid) {
       return [];
-    } catch (e) {
-      const { errors } = e;
-
-      return errors.map((err) => {
-        const prop = errorToProperty(err);
-        const path = err.dataPath ? err.dataPath.substr(1) : null;
-
-        const fullPath = path && prop
-          ? `${path}.${prop}`
-          : path || prop;
-
-        return {
-          ...err,
-          path: fullPath,
-        };
-      });
     }
+
+    const { errors } = validator;
+
+    return errors.map((err) => {
+      const prop = errorToProperty(err);
+      const path = err.dataPath ? err.dataPath.substr(1) : null;
+
+      const fullPath = path && prop
+        ? `${path}.${prop}`
+        : path || prop;
+
+      return {
+        ...err,
+        path: fullPath,
+      };
+    });
   }
 
   render() {
