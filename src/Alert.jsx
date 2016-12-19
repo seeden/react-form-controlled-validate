@@ -5,9 +5,10 @@ export default class Alert extends Element {
   static propTypes = {
     name: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     exact: PropTypes.bool,
-    children: PropTypes.func,
+    children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
     render: PropTypes.func,
     component: PropTypes.node,
+    className: PropTypes.string,
   };
 
   componentDidMount() {
@@ -25,7 +26,7 @@ export default class Alert extends Element {
   }
 
   render() {
-    const { children, render, component: Component, exact, ...rest } = this.props;
+    const { className, children, render, component: Component, exact, ...rest } = this.props;
     const path = this.getPath();
     const form = this.getForm();
 
@@ -38,20 +39,16 @@ export default class Alert extends Element {
       return this.replaceChildren(children({ errors }));
     } else if (typeof render === 'function') {
       return this.replaceChildren(render({ errors }));
+    } else if (Component) {
+      return <Component errors={errors} {...rest} />;
+    } else if (children) {
+      return children;
     }
 
-    if (!Component) {
-      if (children) {
-        return children;
-      }
-
-      return (
-        <div role="alert">
-          {errors.map(error => error.message)}
-        </div>
-      );
-    }
-
-    return <Component errors={errors} {...rest} />;
+    return (
+      <div role="alert" className={className}>
+        {errors.map(error => error.message)}
+      </div>
+    );
   }
 }
