@@ -1,6 +1,6 @@
 {
   "name": "react-form-controlled-validate",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Validation of the forms. High order components for react-form-controlled",
   "author": {
     "name": "Zlatko Fedor",
@@ -67,11 +67,10 @@
     "jest": "^17.0.3",
     "jest-cli": "^17.0.3",
     "enzyme": "^2.6.0",
-    "react-form-controlled": "^0.17.7"
+    "react-form-controlled": "^0.17.14"
   },
   "peerDependencies": {
     "react": "15.x",
-    "babel-runtime": "^6.15.0",
-    "react-form-controlled": "^0.17.7"
+    "react-form-controlled": "^0.17.14"
   }
 }

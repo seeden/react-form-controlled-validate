@@ -67,7 +67,8 @@ describe('Form', () => {
     }, 0);
 
     setTimeout(() => {
-      wrapper.find('[name="password"]').simulate('change', { target: {
+      expect(wrapper.find('input').length).toBe(2);
+      wrapper.find('input').last().simulate('change', { target: {
         value: 'test',
       } });
 
