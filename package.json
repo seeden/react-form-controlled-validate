@@ -1,6 +1,6 @@
 {
   "name": "react-form-controlled-validate",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Validation of the forms. High order components for react-form-controlled",
   "author": {
     "name": "Zlatko Fedor",
@@ -37,7 +37,7 @@
     "eslint": "node ./node_modules/eslint/bin/eslint.js --ext .js,.jsx ./src"
   },
   "dependencies": {
-    "ajv": "^5.0.0-beta.1",
+    "ajv": "^5.0.1-beta.3",
     "core-decorators": "^0.15.0"
   },
   "devDependencies": {
