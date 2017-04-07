@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { Element } from 'react-form-controlled';
+import Element from 'react-form-controlled/lib/Element';
 
 export default class Alert extends Element {
   static propTypes = {
