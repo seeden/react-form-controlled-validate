@@ -1,6 +1,5 @@
 import { Component, cloneElement, PropTypes } from 'react';
 import Ajv from 'ajv';
-import { autobind } from 'core-decorators';
 
 function errorToProperty(err) {
   const { params = {} } = err;
@@ -56,8 +55,7 @@ export default class Validator extends Component {
     return {};
   }
 
-  @autobind
-  async validate(value) {
+  validate = async (value) => {
     const { validator } = this.state;
     if (!validator) {
       return [];
