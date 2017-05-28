@@ -1,6 +1,6 @@
 {
   "name": "react-form-controlled-validate",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Validation of the forms. High order components for react-form-controlled",
   "author": {
     "name": "Zlatko Fedor",
@@ -37,12 +37,13 @@
     "eslint": "node ./node_modules/eslint/bin/eslint.js --ext .js,.jsx ./src"
   },
   "dependencies": {
-    "ajv": "^5.0.4-beta.1"
+    "ajv": "^5.1.5",
+    "babel-runtime": "^6.23.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
-    "babel-eslint": "^7.2.1",
+    "babel-eslint": "^7.2.3",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-proto-to-assign": "^6.23.0",
@@ -52,24 +53,24 @@
     "babel-preset-stage-0": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^14.1.0",
+    "eslint-config-airbnb": "^15.0.1",
     "eslint-loader": "^1.7.1",
-    "eslint-plugin-react": "^6.10.3",
-    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-react": "^7.0.1",
+    "eslint-plugin-import": "^2.3.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-util": "^3.0.8",
-    "react": "^15.4.2",
-    "react-addons-test-utils": "^15.4.2",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "react-dom": "^15.4.2",
-    "jest": "^19.0.2",
-    "jest-cli": "^19.0.2",
-    "enzyme": "^2.8.0",
-    "react-form-controlled": "^0.17.19"
+    "react": "^15.5.4",
+    "react-addons-test-utils": "^15.5.1",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "react-dom": "^15.5.4",
+    "jest": "^20.0.4",
+    "jest-cli": "^20.0.4",
+    "enzyme": "^2.8.2",
+    "react-form-controlled": "^0.17.23"
   },
   "peerDependencies": {
     "react": "15.x",
-    "react-form-controlled": "^0.17.19"
+    "react-form-controlled": "^0.17.23"
   }
 }
