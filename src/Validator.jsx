@@ -1,4 +1,5 @@
-import { Component, cloneElement, PropTypes } from 'react';
+import { Component, cloneElement } from 'react';
+import PropTypes from 'prop-types';
 import Ajv from 'ajv';
 
 function errorToProperty(err) {
