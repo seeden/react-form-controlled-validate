@@ -1,6 +1,6 @@
 {
   "name": "react-form-controlled-validate",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "Validation of the forms. High order components for react-form-controlled",
   "author": {
     "name": "Zlatko Fedor",
@@ -72,7 +72,7 @@
     "react-form-controlled": "^0.17.23"
   },
   "peerDependencies": {
-    "react": "15.x",
-    "react-form-controlled": "^0.17.23"
+    "react": "15.x || 16.x",
+    "react-form-controlled": "^0.17.23 || ^0.18.0"
   }
 }
