@@ -1,6 +1,6 @@
 {
   "name": "react-form-controlled-validate",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Validation of the forms. High order components for react-form-controlled",
   "author": {
     "name": "Zlatko Fedor",
@@ -26,7 +26,9 @@
   ],
   "private": false,
   "license": "MIT",
-  "main": "./lib/index.js",
+  "main": "./dist/index.js",
+  "browser": "./lib/index.js",
+  "module": "./module/index.js",
   "esnext": "./src/index.js",
   "engines": {
     "node": ">= 0.10.0"
