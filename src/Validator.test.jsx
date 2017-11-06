@@ -1,7 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import Form from 'react-form-controlled';
-import Validator, { Alert } from '../src';
+import Validator from './Validator';
+import Alert from './Alert';
 
 describe('Form', () => {
   it('should be able to create simple instance', (done) => {
@@ -58,10 +59,10 @@ describe('Form', () => {
     ));
 
     expect(wrapper.find('form').length).toBe(1);
-    wrapper.find('[type="submit"]').get(0).click();
+    wrapper.render().find('[type="submit"]').at(0).click();
 
     setTimeout(() => {
-      const div = wrapper.find('div');
+      const div = wrapper.render().find('div');
       expect(div.text()).toBe('should have required property \'password\'');
       steps++;
     }, 0);
@@ -72,7 +73,7 @@ describe('Form', () => {
         value: 'test',
       } });
 
-      wrapper.find('[type="submit"]').get(0).click();
+      wrapper.render().find('[type="submit"]').at(0).click();
     }, 0);
   });
 });
