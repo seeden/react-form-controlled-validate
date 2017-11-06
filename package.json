@@ -1,6 +1,6 @@
 {
   "name": "react-form-controlled-validate",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Validation of the forms. High order components for react-form-controlled",
   "author": {
     "name": "Zlatko Fedor",
