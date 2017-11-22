@@ -1,6 +1,6 @@
 {
   "name": "react-form-controlled-validate",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Validation of the forms. High order components for react-form-controlled",
   "author": {
     "name": "Zlatko Fedor",
@@ -67,22 +67,22 @@
     "babel-preset-stage-0": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "cross-env": "^5.1.1",
-    "eslint": "^4.10.0",
+    "eslint": "^4.11.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-loader": "^1.9.0",
-    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-react": "^7.5.1",
     "eslint-plugin-import": "^2.8.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
-    "react-form-controlled": "^0.20.6",
+    "react-form-controlled": "^0.20.7",
     "jest": "^21.2.1",
     "jest-cli": "^21.2.1",
-    "enzyme": "^3.1.1",
-    "enzyme-adapter-react-16": "^1.0.4",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-test-renderer": "^16.0.0"
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-test-renderer": "^16.1.1"
   },
   "peerDependencies": {
     "react": "15.x || 16.x",
